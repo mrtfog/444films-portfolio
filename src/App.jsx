@@ -1,10 +1,12 @@
 import './_app.module.scss'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
 
   return (
     <div className="App">
-        Esto solo es una prueba
+      <Navbar />
+      Esto solo es una prueba
     </div>
   )
 }
