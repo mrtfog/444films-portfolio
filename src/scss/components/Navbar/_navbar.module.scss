@@ -1,0 +1,86 @@
+@import '../../../scss//abstracts/mixins.module';
+@import '../../../scss//abstracts/variables.module';
+
+.navbarContainer{
+    width: 100vw;
+    height: 100px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: transparent;
+    z-index: 10;
+    .imgBox{
+        width: 33%;
+        margin-left: 30px;
+        img{
+            width: 80px;
+            height: 80px;
+            transition: .2s linear;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 0.1rem $light-color);
+            }
+        }
+    }
+
+    .listContainer{
+        height: 100%;
+        width: 66%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 30px;
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            li{
+                margin: 0 10px;
+                a{  
+                    span{
+                        font-size: 18px;
+                        color: $light-color;
+                        transition: .2s linear;
+                        &:hover{
+                            color: $contrast-light-color2;
+                            text-shadow: 0 0 10px $dark-color,
+                                         0 0 15px $dark-color;
+                        }
+                    }
+                    &:visited{
+                        color: $light-color;
+                    }
+                }
+            }
+        }
+        .colorModeIcons{
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            span{
+                height: 40px;
+                width: 40px;
+                font-size: 28px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: .2s linear;
+                &:hover{
+                    color: $contrast-light-color2;
+                    text-shadow: 0 0 10px $dark-color,
+                                 0 0 15px $dark-color;
+                }
+            }
+
+        }
+    }
+}
