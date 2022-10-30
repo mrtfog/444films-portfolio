@@ -7,9 +7,29 @@ import s from '../../scss/components/Navbar/_navbar.module.scss'
 export default function Navbar() {
 
   const [ colorMode, setColorMode ] = useState('dark')
+  const [color, setColor] = useState(false);
+  
+
+  const changeColor = () => {
+    if (window.scrollY >= 20) {
+      setColor(true);
+    }
+    if (window.scrollY === 0) {
+      setColor(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeColor);
 
   return (
-    <div className={s.navbarContainer}>
+    <div className={s.navbarContainer} style={
+      color
+        ? {
+          backgroundColor: "rgba(17, 17, 17, .7)",
+          transition: ".4s linear",
+        }
+        : { backgroundColor: "transparent", transition: ".4s linear" }
+    }>
 
       <div className={s.imgBox}>
         <img src={logo} alt="4.4.4 Films" />

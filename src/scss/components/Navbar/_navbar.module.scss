@@ -3,7 +3,7 @@
 
 .navbarContainer{
     width: 100vw;
-    height: 100px;
+    height: 70px;
 
     display: flex;
     flex-direction: row;
@@ -12,6 +12,10 @@
     position: fixed;
     background-color: transparent;
     z-index: 10;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
     .imgBox{
         width: 33%;
         margin-left: 30px;
@@ -22,11 +26,11 @@
             cursor: pointer;
             &:hover{
                 transform: scale(1.1);
-                filter: drop-shadow(0 0 0.1rem $light-color);
+                filter: drop-shadow(0 0 .05rem $light-color);
             }
         }
     }
-
+    
     .listContainer{
         height: 100%;
         width: 66%;
@@ -45,13 +49,12 @@
                 margin: 0 10px;
                 a{  
                     span{
-                        font-size: 18px;
+                        font-size: 16px;
                         color: $light-color;
                         transition: .2s linear;
                         &:hover{
-                            color: $contrast-light-color2;
+                            color: $contrast-light-color;
                             text-shadow: 0 0 10px $dark-color,
-                                         0 0 15px $dark-color;
                         }
                     }
                     &:visited{
@@ -75,7 +78,7 @@
                 cursor: pointer;
                 transition: .2s linear;
                 &:hover{
-                    color: $contrast-light-color2;
+                    color: $contrast-light-color;
                     text-shadow: 0 0 10px $dark-color,
                                  0 0 15px $dark-color;
                 }

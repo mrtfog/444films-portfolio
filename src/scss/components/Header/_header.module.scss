@@ -1,13 +1,100 @@
-.headerContainer{
-    .videoContainer{
-        .darkFilter{
+@import '../../../scss//abstracts/mixins.module';
+@import '../../../scss//abstracts/variables.module';
 
-            .video{
-                object-fit: cover;
-                width: 100%;
-                height: 100vh;
-                z-index: -1;
-            }        
+.headerContainer{
+    overflow-y: hidden;
+    .filter{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .75);
+        filter: grayscale(20%);
+        z-index: 1;
+    }
+
+    .headerContent{
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        top: 50%;
+        left: 20%;
+        transform:translate(-50%, -50%);
+        z-index: 2;
+
+        h1{
+            font-size: 60px;
+            font-weight: 600;
+            animation: 1s titleAnimation;
+            animation-fill-mode: forwards;
+            animation-delay: .4s;
+            opacity: 0;
         }
+
+        p{
+            width: 30vw;
+            font-size: 22px;
+            font-weight: 400;
+            animation: 1s sloganAnimation;
+            animation-fill-mode: forwards;
+            animation-delay: .8s;
+            opacity: 0;
+        }
+    }
+
+    .videoContainer{
+        .video{
+            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+            z-index: -1;
+        }        
+    }
+
+    .scrollDown{
+        position: absolute;
+        text-align: center;
+        top: 90%;
+        left: 50%;
+        z-index: 2;
+        height: 90px;
+        transform:translate(-50%, 0);
+
+        p{
+            font-size: 18px;
+        }
+        .scrollDownIcon{
+            font-size: 25px;
+            transition: .2s linear;
+            &:hover{
+                color: $contrast-light-color;
+                text-shadow: 0 0 10px $dark-color,
+                             0 0 15px $dark-color;
+                transform: scale(1.10);
+            }
+        }
+    }
+}
+
+@keyframes titleAnimation {
+    0%{
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes sloganAnimation {
+    0%{
+        opacity: 0;
+        transform: translateX(2rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
     }
 }
