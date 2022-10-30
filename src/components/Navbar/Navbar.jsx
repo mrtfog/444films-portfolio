@@ -9,6 +9,16 @@ export default function Navbar() {
   const [ colorMode, setColorMode ] = useState('dark')
   const [color, setColor] = useState(false);
   
+  window.addEventListener("scroll", () => {
+    let height = document.documentElement.scrollHeight - window.innerHeight
+    let position = window.scrollY
+    let width = document.documentElement.clientWidth
+
+    let bar = position / height * width
+    document.getElementById("progress").style.width = bar + "px"
+  })
+
+
 
   const changeColor = () => {
     if (window.scrollY >= 20) {
@@ -31,15 +41,16 @@ export default function Navbar() {
         : { backgroundColor: "transparent", transition: ".4s linear" }
     }>
 
+      <div className={s.navbarContent}>
       <div className={s.imgBox}>
         <img src={logo} alt="4.4.4 Films" />
       </div>
 
       <div className={s.listContainer}>
         <ul className={s.navbarListUl}>
-          {MenuItems.map((item, index) => {
+          {MenuItems.map((item) => {
             return (
-              <li key={index} className={s.navbarListLi}>
+              <li key={item.url} className={s.navbarListLi}>
                 <a className={s.menuOptions} href={item.url}>
                   <span>
                     {item.Title}
@@ -58,6 +69,16 @@ export default function Navbar() {
           }
         </div>
       </div>
+      </div>
+      
+      <div className={s.progressBar} id="progress" style={
+      color
+        ? {
+          backgroundColor: "#FF1443",
+          transition: ".4s linear",
+        }
+        : { backgroundColor: "transparent", transition: ".4s linear" }
+    }></div>
     </div>
   )
 }

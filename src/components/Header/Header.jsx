@@ -6,7 +6,7 @@ import {BsChevronDown} from 'react-icons/bs'
 
 export default function Header() {
   return (
-    <div className={s.headerContainer}>
+    <header className={s.headerContainer}>
       <div className={s.filter}></div>
 
       <div className={s.headerContent}>
@@ -25,6 +25,6 @@ export default function Header() {
           </video>
       </div>
 
-    </div>
+    </header>
   )
 }

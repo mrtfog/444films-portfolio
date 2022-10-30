@@ -1,18 +1,23 @@
 export const MenuItems = [
     {
       Title: "Sobre nosotros",
-      url: "#",
+      url: "Sobre-nosotros",
     },
     {
       Title: "Portafolio",
-      url: "#",
+      url: "Portafolio",
     },
     {
       Title: "Nuestros servicios",
-      url: "#",
+      url: "Nuestros-servicios",
+    },
+    {
+      Title: "Estudio",
+      url: "Estudio",
     },
     {
       Title: "Contacto",
-      url: "#",
+      url: "Contacto",
     }
   ];
+ 

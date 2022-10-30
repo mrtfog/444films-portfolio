@@ -28,7 +28,7 @@
             font-weight: 600;
             animation: 1s titleAnimation;
             animation-fill-mode: forwards;
-            animation-delay: .4s;
+            animation-delay: .5s;
             opacity: 0;
         }
 
@@ -38,7 +38,7 @@
             font-weight: 400;
             animation: 1s sloganAnimation;
             animation-fill-mode: forwards;
-            animation-delay: .8s;
+            animation-delay: 1s;
             opacity: 0;
         }
     }
@@ -67,6 +67,7 @@
         .scrollDownIcon{
             font-size: 25px;
             transition: .2s linear;
+            cursor: pointer;
             &:hover{
                 color: $contrast-light-color;
                 text-shadow: 0 0 10px $dark-color,
