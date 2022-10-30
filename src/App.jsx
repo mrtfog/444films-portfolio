@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      Esto solo es una prueba
     </div>
   )
 }
