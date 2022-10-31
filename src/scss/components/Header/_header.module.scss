@@ -60,7 +60,10 @@
         z-index: 2;
         height: 90px;
         transform:translate(-50%, 0);
-
+        animation: 1s scrollDown;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+        opacity: 0;
         p{
             font-size: 18px;
         }
@@ -97,5 +100,16 @@
     100%{
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes scrollDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
     }
 }

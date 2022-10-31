@@ -3,6 +3,6 @@ import s from '../../scss/components/AboutUs/_aboutUs.module.scss'
 
 export default function AboutUs() {
   return (
-    <div className={s.AboutUsContainer}>AboutUs</div>
+    <div className={s.AboutUsContainer} id='Sobre-nosotros'>AboutUs</div>
   )
 }

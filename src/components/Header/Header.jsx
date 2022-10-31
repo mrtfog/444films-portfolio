@@ -1,12 +1,14 @@
 import React from 'react'
 import headerVideo from '../../assets/444F/Video/HeaderVideo.mp4'
-import s from '../../scss/components/Header/_header.module.scss'
+import { Link } from 'react-scroll'
+import { MenuItems } from '../Navbar/Menuitems'
 import {BsChevronDown} from 'react-icons/bs'
+import s from '../../scss/components/Header/_header.module.scss'
 
 
 export default function Header() {
   return (
-    <header className={s.headerContainer}>
+    <header className={s.headerContainer} id='Header'>
       <div className={s.filter}></div>
 
       <div className={s.headerContent}>
@@ -16,7 +18,9 @@ export default function Header() {
 
       <div className={s.scrollDown}>
         <p> Ver más</p>
-        <p className={s.scrollDownIcon}> <BsChevronDown /> </p>
+        <Link activeClass="active" to={MenuItems[1].url} spy={true} smooth={true} offset={0} duration={1000}>
+          <p className={s.scrollDownIcon}> <BsChevronDown /> </p>
+        </Link>
       </div>
 
       <div className={s.videoContainer}>

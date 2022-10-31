@@ -3,6 +3,6 @@ import s from '../../scss/components/Contact/_contact.module.scss'
 
 export default function Contact() {
   return (
-    <div className={s.contactContainer}>Contact</div>
+    <div className={s.contactContainer} id='Contacto'>Contact</div>
   )
 }
