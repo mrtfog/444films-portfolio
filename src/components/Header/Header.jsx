@@ -18,7 +18,7 @@ export default function Header() {
 
       <div className={s.scrollDown}>
         <p> Ver más</p>
-        <Link activeClass="active" to={MenuItems[1].url} spy={true} smooth={true} offset={0} duration={1000}>
+        <Link activeClass="active" to={MenuItems[0].url} spy={true} smooth={true} offset={0} duration={1000}>
           <p className={s.scrollDownIcon}> <BsChevronDown /> </p>
         </Link>
       </div>
