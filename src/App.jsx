@@ -14,11 +14,13 @@ function App() {
       <Navbar />
       <main className="App">
         <Header />
-        <AboutUs />
-        <Portfolio />
-        <OurServices />
-        <Studio />
-        <Contact />
+        <section>
+          <AboutUs />
+          <Portfolio />
+          <OurServices />
+          <Studio />
+          <Contact />
+        </section>
       </main>
     </>
   )

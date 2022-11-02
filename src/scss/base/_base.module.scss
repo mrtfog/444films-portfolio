@@ -4,19 +4,15 @@ html, body{
     font-family: $font;
     color: $light-color;
     background-color: $dark-color;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 
 ::-webkit-scrollbar{
+    width: 5px;
 
-    background-color: transparent;
-    width: 7px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: $light-color;
+    background: $light-color;
     border-radius: 4px;
 }

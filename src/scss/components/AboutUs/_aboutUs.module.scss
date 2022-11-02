@@ -1,4 +1,68 @@
+@import '../../../scss//abstracts/mixins.module';
+@import '../../../scss//abstracts/variables.module';
+
+
 .AboutUsContainer{
     height: 100vh;
     width: 100vw;
+    margin: auto;
+
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .mainContainer{
+        height: 70%;
+        width: 80%;
+        margin-top: 70px;
+
+        background-color: rgba(17, 17, 17, .3);
+        backdrop-filter: blur( 3.5px );
+        -webkit-backdrop-filter: blur( 3.5px );
+        border-radius: 10px;
+        border: 2px solid rgba( 0, 0, 0, 0.2 );
+
+
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+
+        .imgBox{
+            position: absolute;
+            top: 0;
+            left: 0;
+            img{
+                height: 175px;
+                width: 175px;
+            }
+
+        }
+
+        .infoContainer{
+            width: 70%;
+            height: 80%;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            h2{
+                font-size: 32px;
+                color: $contrast-light-color;
+            }
+
+            p{
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+    }
 }

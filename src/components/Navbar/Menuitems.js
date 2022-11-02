@@ -18,6 +18,6 @@ export const MenuItems = [
     {
       Title: "Contacto",
       url: "Contacto",
-    }
+    },
   ];
  
