@@ -1,16 +1,32 @@
+@import '../../../scss//abstracts/mixins.module';
+@import '../../../scss//abstracts/variables.module';
+
+
 .portfolioContainer{
-    height: 120vh;
+    height: max-content;
     width: 100vw;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    .portfolioTitle{
+        margin-top: 100px;
+        h2{
+            font-size: 32px;
+            color: $contrast-light-color;   
+        }
+    }
 
     .mainContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         height: 100%;
         width: 80%;
-        margin-top: 120px;
+        margin-top: 20px;
 
         background: transparent;
         backdrop-filter: blur( 3.5px );
