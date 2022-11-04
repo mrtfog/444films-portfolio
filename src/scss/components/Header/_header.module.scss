@@ -9,8 +9,7 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, .75);
-        filter: grayscale(20%);
+        background-color: rgba(0, 0, 0, .6);
         z-index: 1;
     }
 
@@ -30,6 +29,7 @@
             animation-fill-mode: forwards;
             animation-delay: .5s;
             opacity: 0;
+            color: $light-color;
         }
 
         p{
@@ -40,6 +40,7 @@
             animation-fill-mode: forwards;
             animation-delay: 1s;
             opacity: 0;
+            color: $light-color;
         }
     }
 
@@ -49,12 +50,14 @@
             width: 100%;
             height: 100vh;
             z-index: -1;
+
         }        
     }
 
     .scrollDown{
         position: absolute;
         text-align: center;
+        color: $light-color;
         top: 90%;
         left: 50%;
         z-index: 2;
