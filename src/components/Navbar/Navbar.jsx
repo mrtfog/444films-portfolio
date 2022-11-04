@@ -11,6 +11,18 @@ export default function Navbar() {
   const [color, setColor] = useState(false);
 
   const home = 'Header'
+
+  window.addEventListener('click', () => {
+    const body = document.getElementsByTagName("BODY")[0]
+    
+    if(colorMode === 'dark'){
+      body.style.color = "rgb(250, 250, 250)"
+      body.style.backgroundColor = "rgb(29, 29, 27)"
+    } else {
+      body.style.color = "rgb(0, 0, 0)"
+      body.style.backgroundColor = "rgb(250, 250, 250)"
+    }
+  })
   
   window.addEventListener("scroll", () => {
     let height = document.documentElement.scrollHeight - window.innerHeight
@@ -65,12 +77,12 @@ export default function Navbar() {
             );
           })}
         </ul>
-        <div className={s.colorModeIcons}>
+        <div className={`${s.colorModeIcons}`}>
           {
             colorMode === 'dark' ? 
-              <span onClick={() => setColorMode('light')}> <BsFillSunFill /> </span> 
+              <span onClick={() => setColorMode('light')} > <BsFillSunFill /> </span> 
             :
-              <span onClick={() => setColorMode('dark')}> <BsFillMoonFill /> </span>
+              <span onClick={() =>  setColorMode('dark')} > <BsFillMoonFill /> </span>
           }
         </div>
       </div>
