@@ -8,10 +8,6 @@ export const MenuItems = [
       url: "Portafolio",
     },
     {
-      Title: "Nuestros servicios",
-      url: "Nuestros-servicios",
-    },
-    {
       Title: "Estudio",
       url: "Estudio",
     },

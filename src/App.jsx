@@ -4,7 +4,6 @@ import AboutUs from './components/About Us/AboutUs'
 import Header from './components/Header/Header'
 import Contact from './components/Contact/Contact'
 import Portfolio from './components/Portfolio/Portfolio'
-import OurServices from './components/Our Services/OurServices'
 import Studio from './components/Studio/Studio'
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
         <section>
           <AboutUs />
           <Portfolio />
-          <OurServices />
           <Studio />
           <Contact />
         </section>
