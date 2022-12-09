@@ -1,0 +1,33 @@
+
+.pin{
+
+    border-radius: 15px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+
+    .mainPic{
+        width: 100%;
+        object-fit: cover;
+
+        &>img{
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .img1x1{
+
+            aspect-ratio: 1 / 1;
+        } 
+        .img1x2{
+            aspect-ratio: 1 / 2;
+        }
+    }
+}
+
+.medium{
+   grid-row-end: span 50; 
+}
+.large{
+    grid-row-end: span 100;
+}

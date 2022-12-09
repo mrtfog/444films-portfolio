@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../assets/444F/Logo/Render/Transparent-background-logo.png'
+import logo from '../../assets/Supra/ICON-TRANSPARENT.png'
 import s from '../../scss/components/AboutUs/_aboutUs.module.scss'
 
 export default function AboutUs() {

@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import { MenuItems } from './Menuitems'
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
-import logo from '../../assets/444F/Logo/Render/Transparent-background-logo.png'
+import logo from '../../assets/Supra/ICON-TRANSPARENT.png'
+import text from '../../assets/Supra/TEXT-TRANSPARENT.png'
 import s from '../../scss/components/Navbar/_navbar.module.scss'
 
 export default function Navbar() {
@@ -59,7 +60,8 @@ export default function Navbar() {
       <div className={s.navbarContent}>
       <div className={s.imgBox}>
         <Link activeClass="active" to={home} spy={true} smooth={true} offset={0} duration={1000} className={s.menuOptions}>
-          <img src={logo} alt="4.4.4 Films" />
+          <img src={logo} alt="Supra" />
+          <img src={text} alt="Supra" />
         </Link>
       </div>
 

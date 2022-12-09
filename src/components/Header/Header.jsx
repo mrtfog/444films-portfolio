@@ -1,5 +1,5 @@
 import React from 'react'
-import headerVideo from '../../assets/444F/Video/HeaderVideo.mp4'
+import headerVideo from '../../assets/Supra/Video/HeaderVideo.mp4'
 import { Link } from 'react-scroll'
 import { MenuItems } from '../Navbar/Menuitems'
 import {BsChevronDown} from 'react-icons/bs'
@@ -12,7 +12,7 @@ export default function Header() {
       <div className={s.filter}></div>
 
       <div className={s.headerContent}>
-        <h1>4.4.4 Films</h1>
+        <h1>Supra Films</h1>
         <p>La creación, sin límites.</p>
       </div>
 
