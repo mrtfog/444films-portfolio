@@ -13,11 +13,11 @@ export default function Portfolio() {
       </div>
       <div className={s.gallery}  >
         <Card cardSize='medium'  aspect='1x1' img={images.img12}/>
-        <Card cardSize='medium' aspect='1x1' img={images.img32}/>
-        <Card cardSize='large' aspect='1x2' img={images.img2}/>
-        <Card cardSize='medium' aspect='1x1' img={images.img23}/>
-        <Card cardSize='large' aspect='1x2' img={images.img7}/>
-        <Card cardSize='medium' aspect='1x1'img={images.img28}/>
+        <Card cardSize='medium' aspect='1x1' img={images.img12}/>
+        <Card cardSize='large' aspect='1x2' img={images.img12}/>
+        <Card cardSize='medium' aspect='1x1' img={images.img12}/>
+        <Card cardSize='large' aspect='1x2' img={images.img12}/>
+        <Card cardSize='medium' aspect='1x1'img={images.img12}/>
       </div>
     </div>
   )

@@ -1,8 +1,8 @@
 import React from 'react'
-import headerVideo from '../../assets/Supra/Video/HeaderVideo.mp4'
+import headerVideo from '../../assets/Supra/Video/HeaderVideo2.mp4'
 import { Link } from 'react-scroll'
 import { MenuItems } from '../Navbar/Menuitems'
-import {BsChevronDown} from 'react-icons/bs'
+import { BsChevronDown } from 'react-icons/bs'
 import s from '../../scss/components/Header/_header.module.scss'
 
 

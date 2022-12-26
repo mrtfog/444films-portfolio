@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import { MenuItems } from './Menuitems'
 import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
 import { Link } from 'react-scroll'
-import logo from '../../assets/Supra/ICON-TRANSPARENT.png'
-import text from '../../assets/Supra/TEXT-TRANSPARENT.png'
+import Text from '../../assets/Supra/LOGOS/Text.png'
+import Icon from '../../assets/Supra/LOGOS/Icon.png'
 import s from '../../scss/components/Navbar/_navbar.module.scss'
 
 export default function Navbar() {
@@ -60,8 +60,9 @@ export default function Navbar() {
       <div className={s.navbarContent}>
       <div className={s.imgBox}>
         <Link activeClass="active" to={home} spy={true} smooth={true} offset={0} duration={1000} className={s.menuOptions}>
-          <img src={logo} alt="Supra" />
-          <img src={text} alt="Supra" />
+
+            <img src={Icon} alt="Supra" />
+          
         </Link>
       </div>
 
@@ -93,7 +94,7 @@ export default function Navbar() {
       <div className={s.progressBar} id="progress" style={
       color
         ? {
-          backgroundColor: "#FF1443",
+          backgroundColor: "#5B9EB1",
           transition: ".4s linear",
         }
         : { backgroundColor: "transparent", transition: ".4s linear" }

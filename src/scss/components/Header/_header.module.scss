@@ -19,7 +19,7 @@
         width: fit-content;
         top: 50%;
         left: 20%;
-        transform:translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         z-index: 2;
 
         h1{
@@ -29,7 +29,7 @@
             animation-fill-mode: forwards;
             animation-delay: .5s;
             opacity: 0;
-            color: $light-color;
+            color: $contrast-light-color;
         }
 
         p{
@@ -40,7 +40,7 @@
             animation-fill-mode: forwards;
             animation-delay: 1s;
             opacity: 0;
-            color: $light-color;
+            color: $contrast-light-color;
         }
     }
 
@@ -57,7 +57,7 @@
     .scrollDown{
         position: absolute;
         text-align: center;
-        color: $light-color;
+        color: $contrast-light-color;
         top: 90%;
         left: 50%;
         z-index: 2;
@@ -75,7 +75,7 @@
             transition: .2s linear;
             cursor: pointer;
             &:hover{
-                color: $contrast-light-color;
+                color: $light-color;
                 text-shadow: 0 0 10px $dark-color,
                              0 0 15px $dark-color;
                 transform: scale(1.10);

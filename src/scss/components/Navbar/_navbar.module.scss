@@ -21,16 +21,15 @@
         justify-content: space-between;
         align-items: center;
         .imgBox{
+            height: max-content;
             margin-left: 30px;
-            img{
-                width: 70px;
-                height: 70px;
-                transition: .2s linear;
+            transition: .2s linear;
+            position: relative;
+            img:nth-child(1){
+                margin: 15px 5px 15px 5px;
+                width: 40px;
+                height: 30px;
                 cursor: pointer;
-                &:hover{
-                    transform: scale(1.1);
-                    filter: drop-shadow(0 0 .05rem $light-color);
-                }
             }
         }
         
@@ -53,10 +52,10 @@
                         cursor: pointer;
                         span{
                             font-size: 16px;
-                            color: $light-color;
+                            color: $contrast-light-color;
                             transition: .2s linear;
                             &:hover{
-                                color: $contrast-light-color;
+                                color: $light-color;
                                 text-shadow: 0 0 10px $dark-color,
                             }
                         }
@@ -72,7 +71,7 @@
                 flex-direction: row;
                 align-items: center;
                 span{
-                    color: $light-color;
+                    color: $contrast-light-color;
                     height: 40px;
                     width: 40px;
                     font-size: 28px;
@@ -83,7 +82,7 @@
                     transition: .2s linear;
         
                     &:hover{
-                        color: $contrast-light-color;
+                        color: $light-color;
                         text-shadow: 0 0 10px $dark-color,
                                      0 0 15px $dark-color;
                     }
