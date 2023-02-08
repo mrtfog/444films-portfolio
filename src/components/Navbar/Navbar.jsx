@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import { MenuItems } from './Menuitems'
-import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
+import { Moon, Sun, Linkedin, Youtube, Instagram } from '../../constants/icons';
 import { Link } from 'react-scroll'
-import Text from '../../assets/Supra/LOGOS/Text.png'
 import Icon from '../../assets/Supra/LOGOS/Icon.png'
 import s from '../../scss/components/Navbar/_navbar.module.scss'
 
@@ -25,16 +24,6 @@ export default function Navbar() {
     }
   })
   
-  window.addEventListener("scroll", () => {
-    let height = document.documentElement.scrollHeight - window.innerHeight
-    let position = window.scrollY
-    let width = document.documentElement.clientWidth
-
-    let bar = position / height * width
-    document.getElementById("progress").style.width = bar + "px"
-  })
-
-
 
   const changeColor = () => {
     if (window.scrollY >= 20) {
@@ -51,8 +40,9 @@ export default function Navbar() {
     <div className={s.navbarContainer} style={
       color
         ? {
-          backgroundColor: "rgba(17, 17, 17, .7)",
+          backgroundColor: "#1D1D1B",
           transition: ".4s linear",
+          boxShadow: "0px -4px 10px #000"
         }
         : { backgroundColor: "transparent", transition: ".4s linear" }
     }>
@@ -60,9 +50,7 @@ export default function Navbar() {
       <div className={s.navbarContent}>
       <div className={s.imgBox}>
         <Link activeClass="active" to={home} spy={true} smooth={true} offset={0} duration={1000} className={s.menuOptions}>
-
-            <img src={Icon} alt="Supra" />
-          
+          <img src={Icon} alt="Supra" />
         </Link>
       </div>
 
@@ -80,25 +68,27 @@ export default function Navbar() {
             );
           })}
         </ul>
-        <div className={`${s.colorModeIcons}`}>
+        
+      </div>
+
+      <div className={`${s.iconsContainer}`}>
+          <ul className={`${s.socialMedia}`}>
+            <li><Linkedin/></li>
+            <li><Youtube /></li>
+            <li><Instagram /></li>
+          </ul>
+
+          <div className={`${s.colorModeIcons}`}>
           {
             colorMode === 'dark' ? 
-              <span onClick={() => setColorMode('light')} > <BsFillSunFill /> </span> 
+              <span className={`${s.sun}`}  onClick={() => setColorMode('light')} > <Sun /> </span> 
             :
-              <span onClick={() =>  setColorMode('dark')} > <BsFillMoonFill /> </span>
+              <span className={`${s.moon}`} onClick={() =>  setColorMode('dark')} > <Moon /> </span>
           }
         </div>
       </div>
+
       </div>
-      
-      <div className={s.progressBar} id="progress" style={
-      color
-        ? {
-          backgroundColor: "#5B9EB1",
-          transition: ".4s linear",
-        }
-        : { backgroundColor: "transparent", transition: ".4s linear" }
-    }></div>
     </div>
   )
 }

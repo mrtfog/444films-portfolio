@@ -9,7 +9,7 @@
         left: 0;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, .6);
+        background-color: rgba(0, 0, 0, .7);
         z-index: 1;
     }
 
@@ -29,13 +29,13 @@
             animation-fill-mode: forwards;
             animation-delay: .5s;
             opacity: 0;
-            color: $contrast-light-color;
+            color: $light-color;
         }
 
         p{
             width: 30vw;
             font-size: 22px;
-            font-weight: 400;
+            font-weight: 300;
             animation: 1s sloganAnimation;
             animation-fill-mode: forwards;
             animation-delay: 1s;
