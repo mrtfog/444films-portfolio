@@ -1,5 +1,5 @@
 import img1 from '../assets/Supra/Photos/1.png'
-import img2 from '../assets/Supra/Photos/2.png'
+import profile from '../assets/Supra/Photos/2.png'
 import img3 from '../assets/Supra/Photos/3.jpg'
 import img4 from '../assets/Supra/Photos/4.jpg'
 import img5 from '../assets/Supra/Photos/5.jpg'
@@ -30,10 +30,9 @@ import img30 from '../assets/Supra/Photos/30.jpg'
 import img31 from '../assets/Supra/Photos/31.png'
 import img32 from '../assets/Supra/Photos/32.jpg'
 
-
 export default {
     img1,
-    img2,
+    profile,
     img3,
     img4,
     img5,
