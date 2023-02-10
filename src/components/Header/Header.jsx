@@ -13,7 +13,7 @@ export default function Header() {
 
       <div className={s.headerContent}>
         <h1>Lautaro Rodriguez</h1>
-        <p>Productor Audiovisual</p>
+        <p> Fotógrafo • Productor Audiovisual </p>
       </div>
 
       <div className={s.scrollDown}>

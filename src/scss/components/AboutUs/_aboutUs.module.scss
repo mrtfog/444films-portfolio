@@ -5,28 +5,18 @@
 .AboutUsContainer{
     height: 100vh;
     width: 100vw;
-    margin: auto;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include centerDivs;
 
     .mainContainer{
         height: 100%;
         width: 80%;
-        margin-top: 70px;
+        margin-top: 30px;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include centerDivsCols;
         
         .title{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-items: center;
+            @include centerDivsCols;
+            margin: 10px 0 20px 0;
 
             h4{
                 color: $primary-color;
@@ -37,135 +27,181 @@
             }
 
         }
+    }
+}
 
-        .infoContainer{
-            width: 80%;
-            height: 80%;
+.infoContainer{
 
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-evenly;
+    @include centerDivsRows;
+    justify-content: space-evenly;
 
-            .imgBox{
-                margin: 0 20px 0 20px;
-                img{
-                    max-width: 250px;
-                    max-height: 350px;
-                    object-fit: contain;
-                    border-radius: 7px;
-                    transition: .2s ease-in-out;
-                    box-shadow:  0px 0px 10px 0 #AF40FF; 
+    .imgBox{
+        margin: 0 20px 0 20px;
+        img{
+            max-height: 350px;
+            border-radius: 7px;
+            transition: .2s ease-in-out;
+            box-shadow:  0px 0px 7px 0 #5B42F3; 
 
-                    &:hover{
-                        transform: translateY(-10px);
-                        box-shadow: 0px 0px 10px #AF40FF, 
-                                    0px 7px 10px #5B42F3,
-                                    0px 14px 10px #00DDEB;
+            &:hover{
+                transform: translateY(-10px);
+                box-shadow: 0px 10px 10px #5B42F3,
+                            0px 14px 10px #00DDEB;
+            }
+        }
+    }
+
+    .description{
+        @include centerDivsCols;
+        max-width: 50%;
+        .personData{
+            margin-top: 20px;
+            div:nth-child(2){
+                margin-top: 30px;
+            }
+
+            .personInformation{
+                @include centerDivsRows;
+                justify-content: flex-start;
+                
+                .icon{
+                    margin: 0px 10px 10px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 40px;
+                    width: 40px;
+                    background-color: $primary-color;
+                    border-radius: 100%;
+                    svg{
+                        height: 25px;
+                        width: 25px;
                     }
                 }
-            }
-
-            .description{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-
-                .personData{
-                    margin-top: 20px;
+            
+                p{
+                    color: $contrast-light-color;
                 }
             }
+            
+            
+            .buttons{
+                @include centerDivsRows;
+                justify-content: flex-start;
+                width: 100%;
 
+                margin: 50px 0 0 0;
+
+                .primaryButton {
+                  align-items: center;
+                  background-image: linear-gradient(144deg, #5B42F3 50%,#5B42F3);
+                  border: 0;
+                  border-radius: 5px;
+                  box-sizing: border-box;
+                  color: $light-color;
+                  display: flex;
+                  font-size: 16px;
+                  font-weight: 400;
+                  justify-content: center;
+                  line-height: 1em;
+                  max-width: 100%;
+                  min-width: 10px;
+                  font-family: $font;
+                  padding: 3px;
+                  text-decoration: none;
+                  user-select: none;
+                  -webkit-user-select: none;
+                  touch-action: manipulation;
+                  white-space: nowrap;
+                  cursor: pointer;
+                  margin: 0 5px 0 5px;
+                  transition: .3s;
+                
+                  span {
+                    background-color: $secondary-color;
+                    padding: 8px 16px;
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    transition: .3s;
+                  }
+                
+                  &:hover span{
+                    background: none;
+                  }
+                
+                  &:active, &:hover{
+                    outline: 0;
+                    box-shadow: #5a42f32d 0 15px 30px -5px;
+
+                  }
+                
+                  @media (min-width: 768px) {
+                    .primaryButton {
+                      font-size: 14px;
+                      min-width: 196px;
+                    }
+                  }
+                }
+
+                .secondaryButton {
+                    align-items: center;
+                    background-color: transparent;
+                    border: 2px solid #5B42F3;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    color: $contrast-light-color;
+                    display: flex;
+                    font-size: 16px;
+                    font-weight: 400;
+                    justify-content: center;
+                    line-height: 1em;
+                    max-width: 100%;
+                    min-width: 10px;
+                    padding: 1px;
+                    font-family: $font;
+                    text-decoration: none;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    touch-action: manipulation;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    transition: .3s;
+                    margin: 0 5px 0 5px;
+                  
+                    span {
+                      background-color: transparent;
+                      padding: 8px 16px;
+                      border-radius: 5px;
+                      width: 100%;
+                      height: 100%;
+                      transition: .3s;
+                    }
+                  
+                    &:hover span{
+                      background: none;
+                    }
+                  
+                    &:active, &:hover{
+                      outline: 0;
+                      background-color: #5B42F3;
+                      box-shadow: #5a42f32d 0 15px 30px -5px;
+                      color: $light-color;
+                    }
+                  
+                    @media (min-width: 768px) {
+                      .secondaryButton {
+                        font-size: 14px;
+                        min-width: 196px;
+                      }
+                    }
+                  }
+            
+            
+            }                        
         }
     }
+
 }
 
 
-.personInformation{
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    
-    .icon{
-        margin: 10px 10px 10px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 40px;
-        width: 40px;
-        background-color: $primary-color;
-        border-radius: 100%;
-        svg{
-            height: 25px;
-            width: 25px;
-        }
-    }
-
-    p{
-        color: $contrast-light-color;
-    }
-}
-
-
-.buttons{
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-
-    .primaryButton {
-      align-items: center;
-      background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
-      border: 0;
-      border-radius: 8px;
-      box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-      box-sizing: border-box;
-      color: $light-color;
-      display: flex;
-      font-size: 16px;
-      font-weight: 500;
-      justify-content: center;
-      line-height: 1em;
-      max-width: 100%;
-      min-width: 10px;
-      font-family: $font;
-      padding: 3px;
-      text-decoration: none;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      white-space: nowrap;
-      cursor: pointer;
-    
-      span {
-        background-color: rgb(5, 6, 45);
-        padding: 8px 16px;
-        border-radius: 6px;
-        width: 100%;
-        height: 100%;
-        transition: .3s;
-      }
-    
-      &:hover span{
-        background: none;
-      }
-    
-      &:active, &:hover{
-        outline: 0;
-      }
-    
-      @media (min-width: 768px) {
-        .primaryButton {
-          font-size: 14px;
-          min-width: 196px;
-        }
-      }
-    }
-
-
-}    

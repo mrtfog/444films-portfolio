@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import { MenuItems } from './Menuitems'
 import { Moon, Sun, Linkedin, Youtube, Instagram } from '../../constants/icons';
 import { Link } from 'react-scroll'
-import Icon from '../../assets/Supra/LOGOS/Icon.png'
 import s from '../../scss/components/Navbar/_navbar.module.scss'
 
 export default function Navbar() {
@@ -10,16 +9,14 @@ export default function Navbar() {
   const [ colorMode, setColorMode ] = useState('dark')
   const [color, setColor] = useState(false);
 
-  const home = 'Header'
-
   window.addEventListener('click', () => {
     const body = document.getElementsByTagName("BODY")[0]
     
     if(colorMode === 'dark'){
       body.style.color = "rgb(250, 250, 250)"
-      body.style.backgroundColor = "rgb(29, 29, 27)"
+      body.style.backgroundColor = "rgb(20, 21, 24)"
     } else {
-      body.style.color = "rgb(0, 0, 0)"
+      body.style.color = "rgb(20, 21, 25)"
       body.style.backgroundColor = "rgb(250, 250, 250)"
     }
   })
@@ -40,7 +37,7 @@ export default function Navbar() {
     <div className={s.navbarContainer} style={
       color
         ? {
-          backgroundColor: "#1D1D1B",
+          backgroundColor: "rgb(20, 21, 24)",
           transition: ".4s linear",
           boxShadow: "0px -4px 10px #000"
         }
@@ -49,8 +46,10 @@ export default function Navbar() {
 
       <div className={s.navbarContent}>
       <div className={s.imgBox}>
-        <Link activeClass="active" to={home} spy={true} smooth={true} offset={0} duration={1000} className={s.menuOptions}>
-          <img src={Icon} alt="Supra" />
+        <Link activeClass="active" to='Header' spy={true} smooth={true} offset={0} duration={1000} className={s.menuOptions}>
+          <div style={{backgroundColor: "#5B42F3", borderRadius: "100%", height: "40px", width: "40px", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer"}}>
+            <h3>LR</h3>
+          </div>
         </Link>
       </div>
 
