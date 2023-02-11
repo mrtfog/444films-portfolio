@@ -4,6 +4,7 @@
 .navbarContainer{
     max-width: 100vw;
     height: 70px;
+    user-select: none;
 
     display: flex;
     flex-direction: row;

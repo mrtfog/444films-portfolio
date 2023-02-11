@@ -3,6 +3,7 @@
 
 .headerContainer{
     overflow-y: hidden;
+    user-select: none;
     .filter{
         position: absolute;
         top: 0;
@@ -17,7 +18,7 @@
         position: absolute;
         top: 50%;
         left: 20%;
-        transform: translate(-50%, -50%);
+        transform: translate(-40%, -50%);
         z-index: 2;
 
         h1{
@@ -27,7 +28,10 @@
             animation-fill-mode: forwards;
             animation-delay: .5s;
             opacity: 0;
-            color: $primary-color;
+            background: -webkit-linear-gradient(-144deg, $primary-color 50%, $terciary-color);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         p{
