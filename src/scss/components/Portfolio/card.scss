@@ -8,41 +8,22 @@
     position: relative;
     overflow: hidden;
     @include centerDivs;
-    
+
     .cardDetails{
         height: 100%;
         width: 100%;
         z-index: 5;
         position: absolute;
-        display: none;
+        display: flex;
         transition: .2s linear;
 
-        h3{
-            display: none
-        }
-
-        button{
-            display: none
-        }
-
         @include centerDivsCols;
-        &:hover{
-            background-color: $primary-color;
-            opacity: 50%;
-            h3{
-                display: flex;
-            }
-    
-            button{
-                display: flex;
-            }
-    
-
-        }
     }
 
     .mainPic{
         width: 100%;
+        transition: 0.25s;
+        // background-color: transparent;
         &>img{
             width: 100%;
             object-fit: cover;
@@ -64,3 +45,78 @@
 .large{
     grid-row-end: span 60;
 }
+
+  figure figcaption::before {
+      content: "";
+      position: absolute;
+      background-color: trans;
+      inset: 20px;
+      opacity: 0;
+      scale: 1.25;
+      transition: opacity 0.25s, scale 0.25s;
+  }
+  
+  figure:hover figcaption::before {
+      opacity: 1;
+      scale: 1;
+
+  }
+  
+  figure img {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      scale: 1.05;
+      transition: opacity 0.25s, scale 0.35s;
+  }
+  
+  figure:hover img {
+      opacity: 0.5;
+      scale: 1;
+      filter: blur(2px);
+  }
+  
+  figure figcaption {
+      position: absolute;
+      inset: 0;
+      padding: 30px;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 5px;
+      justify-content: center;
+  }
+  
+  figure h4 {
+      font-size: 16px;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      opacity: 0;
+      transition: opacity 0.25s, translate 0.25s;        
+  }
+  
+  figure:hover h4{
+      opacity: 1;
+  }
+  
+  figure:hover{
+      opacity: 1;
+      background: -webkit-linear-gradient(-144deg, $primary-color 50%, $terciary-color);
+  }
+
+  figcaption button {
+      @include primaryButton;
+      transform: translateZ(0) scale(1);
+      transition: transform .25s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      opacity: 0;
+      transition: opacity 0.25s;
+  }
+  
+  figure:hover button{
+      opacity: 1;
+  }

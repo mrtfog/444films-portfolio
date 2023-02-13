@@ -35,7 +35,6 @@ export default function Navbar() {
           backgroundColor: theme.backgroundColor,
           color: theme.color,
           transition: ".4s linear",
-          boxShadow: "0px -4px 10px #000"
         }
         : { backgroundColor: "transparent", transition: ".4s linear", color : '#f5f5f5' }
     }>

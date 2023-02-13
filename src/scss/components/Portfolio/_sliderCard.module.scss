@@ -1,0 +1,22 @@
+@import '../../../scss/abstracts/mixins.module';
+@import '../../../scss/abstracts/variables.module';
+
+
+.sliderCard{
+    padding: 1rem;
+
+    .sliderCard_box{
+        transition: all .3s ease-in;
+        border-radius: 7px;
+        padding-bottom: 1rem;
+
+        &:hover{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;        
+        }
+        .sliderCard_box_image_img{
+            object-fit: cover ;
+            height: 100px;
+            width: 200px;
+        }
+    }
+}

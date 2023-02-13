@@ -3,6 +3,7 @@ import { MdLocationOn as Address} from 'react-icons/Md';
 import { FaPhone as Phone} from 'react-icons/Fa';
 import { IoIosSend as Send } from 'react-icons/Io';
 import { BsChevronDown as ChevronDown, BsFillSunFill as Sun, BsFillMoonFill as Moon} from 'react-icons/bs';
+import { TiArrowLeftThick as LeftArrow, TiArrowRightThick as RightArrow } from 'react-icons/ti'
 
 
 
@@ -18,4 +19,6 @@ export{
     ChevronDown,
     Sun,
     Moon,
+    LeftArrow,
+    RightArrow
 }

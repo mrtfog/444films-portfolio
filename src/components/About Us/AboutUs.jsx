@@ -1,11 +1,15 @@
-import React from 'react';
+import React,{ useContext } from 'react';
 import s from '../../scss/components/AboutUs/_aboutUs.module.scss';
 import { images } from '../../constants/index';
 import { Address, Send } from '../../constants/icons';
 import { Link } from 'react-scroll'
+import { ThemeContext } from '../../contexts/theme';
 
 
 export default function AboutUs() {
+
+  const [{ theme, isDark },toggleTheme] = useContext(ThemeContext);
+ 
 
   return (
     <div className={s.AboutUsContainer} id='Sobre-nosotros' >
@@ -37,13 +41,12 @@ export default function AboutUs() {
                 </div>
                 <div className={s.buttons}>
                   <Link activeClass="active" to='Contacto' spy={true} smooth={true} offset={0} duration={1000}>
-                    <button className={s.primaryCTAButton}> Comunicate conmigo</button>
+                    <button className={s.primaryCTAButton}>Comunicate conmigo </button>
                   </Link>
                   <Link activeClass="active" to='Portafolio' spy={true} smooth={true} offset={0} duration={1000}> 
-                    <button className={s.secondaryCTAButton}>Ver mis trabajos</button>
+                    <button className={s.secondaryCTAButton} style={isDark ? {color: theme.color, transition: '.4s linear'} : {}}>Ver mis trabajos</button>
                   </Link>
                 </div>
-
               </div>
             </div>
 

@@ -5,17 +5,13 @@ function Card({cardSize, img, aspect}) {
 
   return (
     <div className={`pin ${cardSize}`}>
-        <div className='cardDetails'> 
-
-            <h3>Nombre del proyecto</h3>
-            <button>Ver más detalles</button>
-
-        </div>
-
-            <div className='mainPic'>
+            <figure className='mainPic'>
                 <img src={img} alt="" className={ aspect === "1x1" ? "img1x1" : "img1x2" }/>
-
-            </div>
+                <figcaption>
+                    <h4>Nombre del proyecto</h4>
+                    <button>Ver detalles</button>
+                </figcaption>
+            </figure>
 
     </div>
     )

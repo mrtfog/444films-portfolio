@@ -1,5 +1,5 @@
 import './_app.module.scss'
-import { AboutUs, Contact, Header, Navbar, Portfolio } from './components/index'
+import { AboutUs, Contact, Header, Navbar, Portfolio, Slider } from './components/index'
 import React, {useContext} from 'react'
 import { ThemeContext } from './contexts/theme';
 
@@ -18,6 +18,7 @@ function App() {
         <section>
           <AboutUs />
           <Portfolio />
+          <Slider />
           <Contact />
         </section>
       </main>

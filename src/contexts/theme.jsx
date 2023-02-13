@@ -23,11 +23,6 @@ export const ThemeProvider = ({children}) => {
         setIsDark(!isDark);
     };
 
-    useEffect(() => {
-        const isDark = localStorage.getItem('isDark') === "true"
-        setIsDark(isDark)
-    }, []);
-
     return (
         <ThemeContext.Provider value={[{ theme, isDark }, toggleTheme]}>{children}</ThemeContext.Provider>
     )

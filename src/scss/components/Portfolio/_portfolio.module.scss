@@ -1,5 +1,5 @@
-@import '../../../scss//abstracts/mixins.module';
-@import '../../../scss//abstracts/variables.module';
+@import '../../../scss/abstracts/mixins.module';
+@import '../../../scss/abstracts/variables.module';
 
 
 .portfolioContainer{
@@ -13,8 +13,14 @@
         position: relative;
         margin-top: 100px;
         margin-bottom: 40px;
+        @include centerDivsCols;
+
+        h4{
+            @include subtitleSize;
+        }
         h2{
             font-size: 32px;
+            @include titleDegree;
         }
     }
 
