@@ -37,10 +37,10 @@ export default function AboutUs() {
                 </div>
                 <div className={s.buttons}>
                   <Link activeClass="active" to='Contacto' spy={true} smooth={true} offset={0} duration={1000}>
-                    <button role="button" className={s.primaryButton}> <span>Comunicate conmigo</span> </button>
+                    <button className={s.primaryCTAButton}> Comunicate conmigo</button>
                   </Link>
                   <Link activeClass="active" to='Portafolio' spy={true} smooth={true} offset={0} duration={1000}> 
-                    <button role="button" className={s.secondaryButton}> <span>Ver mis trabajos</span> </button>
+                    <button className={s.secondaryCTAButton}>Ver mis trabajos</button>
                   </Link>
                 </div>
 

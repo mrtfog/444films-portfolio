@@ -50,14 +50,7 @@
                         cursor: pointer;
                         span{
                             font-size: 16px;
-                            color: $contrast-light-color;
                             transition: .2s linear;
-                            &:hover{
-                                color: $light-color;
-                            }
-                        }
-                        &:visited{
-                            color: $light-color;
                         }
                     }
                 }
@@ -76,9 +69,9 @@
                 justify-content: center;
                 flex-direction: row;
                 li{ 
-                    color: $contrast-light-color;
                     margin: 0 5px 0 5px; 
                     transition: .2s linear;
+                    cursor: pointer;
 
                     svg{
                         height: 20px;
@@ -86,8 +79,7 @@
                     }
 
                     &:hover{
-                        color: $light-color;
-                        cursor: pointer;
+                        color: $primary-color;
                     }
                 }
             }
@@ -101,21 +93,18 @@
                 .sun{
                     cursor: pointer;
                     transition: .2s linear;
-                    color: $contrast-light-color;
-
                     svg{
                         height: 30px;
                         width: 30px;
                     }
         
                     &:hover{
-                        color: $light-color;
+                        color: $primary-color;
                     }
                 }
                 .moon{
                     cursor: pointer;
                     transition: .2s linear;
-                    color: $contrast-light-color;
 
                     svg{
                         height: 25px;
@@ -123,7 +112,7 @@
                     }
         
                     &:hover{
-                        color: $light-color;
+                        color: $primary-color;
                     }
                 }
     

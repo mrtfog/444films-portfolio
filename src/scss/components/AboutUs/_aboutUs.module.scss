@@ -1,5 +1,5 @@
-@import '../../../scss//abstracts/mixins.module';
-@import '../../../scss//abstracts/variables.module';
+@import '../../../scss/abstracts/mixins.module';
+@import '../../../scss/abstracts/variables.module';
 
 
 .AboutUsContainer{
@@ -19,11 +19,13 @@
             margin: 10px 0 20px 0;
 
             h4{
-                color: $primary-color;
+                font-size: 20px;
                 font-weight: 500;
             }
             h2{
                 font-weight: 700;
+                font-size: 40px;
+                @include titleDegree
             }
 
         }
@@ -78,10 +80,6 @@
                         width: 25px;
                     }
                 }
-            
-                p{
-                    color: $contrast-light-color;
-                }
             }
             
             
@@ -92,110 +90,13 @@
 
                 margin: 50px 0 0 0;
 
-                .primaryButton {
-                  align-items: center;
-                  background-image: linear-gradient(144deg, #5B42F3 50%,#5B42F3);
-                  border: 0;
-                  border-radius: 5px;
-                  box-sizing: border-box;
-                  color: $light-color;
-                  display: flex;
-                  font-size: 16px;
-                  font-weight: 400;
-                  justify-content: center;
-                  line-height: 1em;
-                  max-width: 100%;
-                  min-width: 10px;
-                  font-family: $font;
-                  padding: 3px;
-                  text-decoration: none;
-                  user-select: none;
-                  -webkit-user-select: none;
-                  touch-action: manipulation;
-                  white-space: nowrap;
-                  cursor: pointer;
-                  margin: 0 5px 0 5px;
-                  transition: .3s;
-                
-                  span {
-                    background-color: $secondary-color;
-                    padding: 8px 16px;
-                    border-radius: 5px;
-                    width: 100%;
-                    height: 100%;
-                    transition: .3s;
-                  }
-                
-                  &:hover span{
-                    background: none;
-                  }
-                
-                  &:active, &:hover{
-                    outline: 0;
-                    box-shadow: #5a42f32d 0 15px 30px -5px;
-
-                  }
-                
-                  @media (min-width: 768px) {
-                    .primaryButton {
-                      font-size: 14px;
-                      min-width: 196px;
-                    }
-                  }
+                .primaryCTAButton{
+                  @include primaryButton;
                 }
 
-                .secondaryButton {
-                    align-items: center;
-                    background-color: transparent;
-                    border: 2px solid #5B42F3;
-                    border-radius: 5px;
-                    box-sizing: border-box;
-                    color: $contrast-light-color;
-                    display: flex;
-                    font-size: 16px;
-                    font-weight: 400;
-                    justify-content: center;
-                    line-height: 1em;
-                    max-width: 100%;
-                    min-width: 10px;
-                    padding: 1px;
-                    font-family: $font;
-                    text-decoration: none;
-                    user-select: none;
-                    -webkit-user-select: none;
-                    touch-action: manipulation;
-                    white-space: nowrap;
-                    cursor: pointer;
-                    transition: .3s;
-                    margin: 0 5px 0 5px;
-                  
-                    span {
-                      background-color: transparent;
-                      padding: 8px 16px;
-                      border-radius: 5px;
-                      width: 100%;
-                      height: 100%;
-                      transition: .3s;
-                    }
-                  
-                    &:hover span{
-                      background: none;
-                    }
-                  
-                    &:active, &:hover{
-                      outline: 0;
-                      background-color: #5B42F3;
-                      box-shadow: #5a42f32d 0 15px 30px -5px;
-                      color: $light-color;
-                    }
-                  
-                    @media (min-width: 768px) {
-                      .secondaryButton {
-                        font-size: 14px;
-                        min-width: 196px;
-                      }
-                    }
-                  }
+                .secondaryCTAButton{
+                  @include secondaryButton;
+                }
             
             
             }                        

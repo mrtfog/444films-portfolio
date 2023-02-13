@@ -1,26 +1,16 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import { MenuItems } from './Menuitems'
 import { Moon, Sun, Linkedin, Youtube, Instagram } from '../../constants/icons';
 import { Link } from 'react-scroll'
 import s from '../../scss/components/Navbar/_navbar.module.scss'
+import { ThemeContext } from '../../contexts/theme';
 
 export default function Navbar() {
 
-  const [ colorMode, setColorMode ] = useState('dark')
+  const [ colorMode, setColorMode ] = useState('dark');
   const [color, setColor] = useState(false);
 
-  window.addEventListener('click', () => {
-    const body = document.getElementsByTagName("BODY")[0]
-    
-    if(colorMode === 'dark'){
-      body.style.color = "rgb(250, 250, 250)"
-      body.style.backgroundColor = "rgb(20, 21, 24)"
-    } else {
-      body.style.color = "rgb(20, 21, 25)"
-      body.style.backgroundColor = "rgb(250, 250, 250)"
-    }
-  })
-  
+  const [{ theme, isDark },toggleTheme] = useContext(ThemeContext);
 
   const changeColor = () => {
     if (window.scrollY >= 20) {
@@ -33,15 +23,21 @@ export default function Navbar() {
 
   window.addEventListener("scroll", changeColor);
 
+  const changeThemeColor = (value) => {
+    setColorMode(value);
+    toggleTheme();
+  };
+
   return (
-    <div className={s.navbarContainer} style={
+    <div className={`${s.navbarContainer}`} style={
       color
         ? {
-          backgroundColor: "rgb(20, 21, 24)",
+          backgroundColor: theme.backgroundColor,
+          color: theme.color,
           transition: ".4s linear",
           boxShadow: "0px -4px 10px #000"
         }
-        : { backgroundColor: "transparent", transition: ".4s linear" }
+        : { backgroundColor: "transparent", transition: ".4s linear", color : '#f5f5f5' }
     }>
 
       <div className={s.navbarContent}>
@@ -80,9 +76,9 @@ export default function Navbar() {
           <div className={`${s.colorModeIcons}`}>
           {
             colorMode === 'dark' ? 
-              <span className={`${s.sun}`}  onClick={() => setColorMode('light')} > <Sun /> </span> 
+              <span className={`${s.sun}`}  onClick={() => changeThemeColor('light')} > <Sun /> </span> 
             :
-              <span className={`${s.moon}`} onClick={() =>  setColorMode('dark')} > <Moon /> </span>
+              <span className={`${s.moon}`} onClick={() =>  changeThemeColor('dark')} > <Moon /> </span>
           }
         </div>
       </div>

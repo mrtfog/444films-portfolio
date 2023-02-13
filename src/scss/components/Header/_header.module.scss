@@ -28,10 +28,7 @@
             animation-fill-mode: forwards;
             animation-delay: .5s;
             opacity: 0;
-            background: -webkit-linear-gradient(-144deg, $primary-color 50%, $terciary-color);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            @include titleDegree
         }
 
         p{
