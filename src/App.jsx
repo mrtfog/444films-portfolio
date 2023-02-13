@@ -1,28 +1,27 @@
 import './_app.module.scss'
-import Navbar from './components/Navbar/Navbar'
-import AboutUs from './components/About Us/AboutUs'
-import Header from './components/Header/Header'
-import Contact from './components/Contact/Contact'
-import Portfolio from './components/Portfolio/Portfolio'
-import OurServices from './components/Our Services/OurServices'
-import Studio from './components/Studio/Studio'
+import { AboutUs, Contact, Header, Navbar, Portfolio } from './components/index'
+import React, {useContext} from 'react'
+import { ThemeContext } from './contexts/theme';
+
 
 function App() {
 
+
+  const [{theme, isDark}] = useContext(ThemeContext);
+
+
   return (
-    <>
+    <div style={{backgroundColor: theme.backgroundColor, color: theme.color, transition: ".4s linear"}}>
       <Navbar />
       <main className="App">
         <Header />
         <section>
           <AboutUs />
           <Portfolio />
-          <OurServices />
-          <Studio />
           <Contact />
         </section>
       </main>
-    </>
+    </div>
   )
 }
 

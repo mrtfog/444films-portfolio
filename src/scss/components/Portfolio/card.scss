@@ -1,0 +1,66 @@
+@import '../../../scss/abstracts/mixins.module';
+@import '../../../scss/abstracts/variables.module';
+
+.pin{
+
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    @include centerDivs;
+    
+    .cardDetails{
+        height: 100%;
+        width: 100%;
+        z-index: 5;
+        position: absolute;
+        display: none;
+        transition: .2s linear;
+
+        h3{
+            display: none
+        }
+
+        button{
+            display: none
+        }
+
+        @include centerDivsCols;
+        &:hover{
+            background-color: $primary-color;
+            opacity: 50%;
+            h3{
+                display: flex;
+            }
+    
+            button{
+                display: flex;
+            }
+    
+
+        }
+    }
+
+    .mainPic{
+        width: 100%;
+        &>img{
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .img1x1{
+
+            aspect-ratio: 1 / 1;
+        } 
+        .img1x2{
+            aspect-ratio: 1 / 2;
+        }
+    }
+}
+
+.medium{
+   grid-row-end: span 40; 
+}
+.large{
+    grid-row-end: span 60;
+}

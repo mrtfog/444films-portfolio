@@ -1,6 +1,9 @@
 import React from 'react'
-import CardsContainer from './CardsContainer'
 import s from '../../scss/components/Portfolio/_portfolio.module.scss'
+import Card from './Card'
+
+import { images } from '../../constants'
+
 
 export default function Portfolio() {
   return (
@@ -8,9 +11,15 @@ export default function Portfolio() {
       <div className={s.portfolioTitle}>
         <h2>Nuestros trabajos</h2> 
       </div>
-      <div className={s.mainContainer} >
-        <CardsContainer />
+      <div className={s.gallery}  >
+        <Card cardSize='medium'  aspect='1x1' img={images.img12}/>
+        <Card cardSize='medium' aspect='1x1' img={images.img18}/>
+        <Card cardSize='large' aspect='1x2' img={images.img12}/>
+        <Card cardSize='medium' aspect='1x1' img={images.img12}/>
+        <Card cardSize='large' aspect='1x2' img={images.img12}/>
+        <Card cardSize='medium' aspect='1x1'img={images.img12}/>
       </div>
     </div>
   )
 }
+

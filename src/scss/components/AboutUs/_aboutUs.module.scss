@@ -1,68 +1,108 @@
-@import '../../../scss//abstracts/mixins.module';
-@import '../../../scss//abstracts/variables.module';
+@import '../../../scss/abstracts/mixins.module';
+@import '../../../scss/abstracts/variables.module';
 
 
 .AboutUsContainer{
     height: 100vh;
     width: 100vw;
-    margin: auto;
-
-
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include centerDivs;
 
     .mainContainer{
-        height: 70%;
+        height: 100%;
         width: 80%;
-        margin-top: 70px;
+        margin-top: 30px;
 
-        background-color: rgba(17, 17, 17, .3);
-        backdrop-filter: blur( 3.5px );
-        -webkit-backdrop-filter: blur( 3.5px );
-        border-radius: 10px;
-        border: 2px solid rgba( 0, 0, 0, 0.2 );
-
-
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include centerDivsCols;
         
+        .title{
+            @include centerDivsCols;
+            margin: 10px 0 20px 0;
 
-        .imgBox{
-            position: absolute;
-            top: 0;
-            left: 0;
-            img{
-                height: 175px;
-                width: 175px;
+            h4{
+                font-size: 20px;
+                font-weight: 500;
             }
-
-        }
-
-        .infoContainer{
-            width: 70%;
-            height: 80%;
-            text-align: center;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-
             h2{
-                font-size: 32px;
-                color: $contrast-light-color;
+                font-weight: 700;
+                font-size: 40px;
+                @include titleDegree
             }
 
-            p{
-                font-size: 18px;
-                font-weight: 300;
-            }
         }
     }
 }
+
+.infoContainer{
+
+    @include centerDivsRows;
+    justify-content: space-evenly;
+
+    .imgBox{
+        margin: 0 20px 0 20px;
+        img{
+            max-height: 350px;
+            border-radius: 7px;
+            transition: .2s ease-in-out;
+            box-shadow:  0px 0px 7px 0 #5B42F3; 
+
+            &:hover{
+                transform: translateY(-10px);
+                box-shadow: 0px 10px 10px #5B42F3,
+                            0px 14px 10px #00DDEB;
+            }
+        }
+    }
+
+    .description{
+        @include centerDivsCols;
+        max-width: 50%;
+        .personData{
+            margin-top: 20px;
+            div:nth-child(2){
+                margin-top: 30px;
+            }
+
+            .personInformation{
+                @include centerDivsRows;
+                justify-content: flex-start;
+                
+                .icon{
+                    margin: 0px 10px 10px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 40px;
+                    width: 40px;
+                    background-color: $primary-color;
+                    border-radius: 100%;
+                    svg{
+                        height: 25px;
+                        width: 25px;
+                    }
+                }
+            }
+            
+            
+            .buttons{
+                @include centerDivsRows;
+                justify-content: flex-start;
+                width: 100%;
+
+                margin: 50px 0 0 0;
+
+                .primaryCTAButton{
+                  @include primaryButton;
+                }
+
+                .secondaryCTAButton{
+                  @include secondaryButton;
+                }
+            
+            
+            }                        
+        }
+    }
+
+}
+
+

@@ -1,18 +1,20 @@
 @import '../abstracts/variables.module';
 
-html, body{
-    font-family: $font;
-    color: $light-color;
-    background-color: $dark-color;
+html{
+    body{
+        font-family: $font;
+        color: $light-color;
+        background-color: $dark-color;
+        transition: .2s linear;
+    }
 }
-
 
 ::-webkit-scrollbar{
-    width: 5px;
-
+    width: 0px;
 }
 
-::-webkit-scrollbar-thumb{
-    background: $light-color;
-    border-radius: 4px;
+
+::selection{
+    background-color: $primary-color;
+    color: $light-color
 }

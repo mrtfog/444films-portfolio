@@ -1,27 +1,16 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
 import { MenuItems } from './Menuitems'
-import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs'
+import { Moon, Sun, Linkedin, Youtube, Instagram } from '../../constants/icons';
 import { Link } from 'react-scroll'
-import logo from '../../assets/444F/Logo/Render/Transparent-background-logo.png'
 import s from '../../scss/components/Navbar/_navbar.module.scss'
+import { ThemeContext } from '../../contexts/theme';
 
 export default function Navbar() {
 
-  const [ colorMode, setColorMode ] = useState('dark')
+  const [ colorMode, setColorMode ] = useState('dark');
   const [color, setColor] = useState(false);
 
-  const home = 'Header'
-  
-  window.addEventListener("scroll", () => {
-    let height = document.documentElement.scrollHeight - window.innerHeight
-    let position = window.scrollY
-    let width = document.documentElement.clientWidth
-
-    let bar = position / height * width
-    document.getElementById("progress").style.width = bar + "px"
-  })
-
-
+  const [{ theme, isDark },toggleTheme] = useContext(ThemeContext);
 
   const changeColor = () => {
     if (window.scrollY >= 20) {
@@ -34,20 +23,29 @@ export default function Navbar() {
 
   window.addEventListener("scroll", changeColor);
 
+  const changeThemeColor = (value) => {
+    setColorMode(value);
+    toggleTheme();
+  };
+
   return (
-    <div className={s.navbarContainer} style={
+    <div className={`${s.navbarContainer}`} style={
       color
         ? {
-          backgroundColor: "rgba(17, 17, 17, .7)",
+          backgroundColor: theme.backgroundColor,
+          color: theme.color,
           transition: ".4s linear",
+          boxShadow: "0px -4px 10px #000"
         }
-        : { backgroundColor: "transparent", transition: ".4s linear" }
+        : { backgroundColor: "transparent", transition: ".4s linear", color : '#f5f5f5' }
     }>
 
       <div className={s.navbarContent}>
       <div className={s.imgBox}>
-        <Link activeClass="active" to={home} spy={true} smooth={true} offset={0} duration={1000} className={s.menuOptions}>
-          <img src={logo} alt="4.4.4 Films" />
+        <Link activeClass="active" to='Header' spy={true} smooth={true} offset={0} duration={1000} className={s.menuOptions}>
+          <div style={{backgroundColor: "#5B42F3", borderRadius: "100%", height: "40px", width: "40px", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer"}}>
+            <h3>LR</h3>
+          </div>
         </Link>
       </div>
 
@@ -65,25 +63,27 @@ export default function Navbar() {
             );
           })}
         </ul>
-        <div className={s.colorModeIcons}>
+        
+      </div>
+
+      <div className={`${s.iconsContainer}`}>
+          <ul className={`${s.socialMedia}`}>
+            <li><Linkedin/></li>
+            <li><Youtube /></li>
+            <li><Instagram /></li>
+          </ul>
+
+          <div className={`${s.colorModeIcons}`}>
           {
             colorMode === 'dark' ? 
-              <span onClick={() => setColorMode('light')}> <BsFillSunFill /> </span> 
+              <span className={`${s.sun}`}  onClick={() => changeThemeColor('light')} > <Sun /> </span> 
             :
-              <span onClick={() => setColorMode('dark')}> <BsFillMoonFill /> </span>
+              <span className={`${s.moon}`} onClick={() =>  changeThemeColor('dark')} > <Moon /> </span>
           }
         </div>
       </div>
+
       </div>
-      
-      <div className={s.progressBar} id="progress" style={
-      color
-        ? {
-          backgroundColor: "#FF1443",
-          transition: ".4s linear",
-        }
-        : { backgroundColor: "transparent", transition: ".4s linear" }
-    }></div>
     </div>
   )
 }
