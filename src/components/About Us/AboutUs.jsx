@@ -4,6 +4,7 @@ import { images } from '../../constants/index';
 import { Address, Send } from '../../constants/icons';
 import { Link } from 'react-scroll'
 import { ThemeContext } from '../../contexts/theme';
+import { motion } from 'framer-motion';
 
 
 export default function AboutUs() {
@@ -15,12 +16,12 @@ export default function AboutUs() {
     <div className={s.AboutUsContainer} id='Sobre-nosotros' >
       <div className={s.mainContainer} >
         
-        <div className={s.title}>
+        <motion.div whileInView={{ y: [-25, 0], opacity: [0, 1]}} transition={{ duration: 1 }} className={s.title}>
           <h4> ¿Quién soy?</h4>
           <h2> Acerca de mi</h2>
-        </div>
+        </motion.div>
 
-        <div className={s.infoContainer} >
+        <motion.div whileInView={{ y: [-25, 0], opacity: [0, 1]}} transition={{ duration: 1.8 }} className={s.infoContainer} >
           <div className={s.imgBox}>
             <img src={images.profile} alt="Profile Photo"/>
           </div>
@@ -50,7 +51,7 @@ export default function AboutUs() {
               </div>
             </div>
 
-        </div>
+        </motion.div>
       </div>
     </div>
   )

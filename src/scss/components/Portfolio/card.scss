@@ -23,7 +23,6 @@
     .mainPic{
         width: 100%;
         transition: 0.25s;
-        // background-color: transparent;
         &>img{
             width: 100%;
             object-fit: cover;
@@ -49,7 +48,7 @@
   figure figcaption::before {
       content: "";
       position: absolute;
-      background-color: trans;
+      background-color: transparent;
       inset: 20px;
       opacity: 0;
       scale: 1.25;
@@ -94,29 +93,24 @@
       letter-spacing: 1px;
       text-transform: capitalize;
       opacity: 0;
-      transition: opacity 0.25s, translate 0.25s;        
+      transition: opacity 0.25s;        
   }
   
   figure:hover h4{
       opacity: 1;
   }
+
+  figure button{
+    z-index: 5;
+    @include primaryButton;
+    opacity: 0;
+  }
+
+  figure:hover button{
+    opacity: 1;
+}
   
   figure:hover{
       opacity: 1;
       background: -webkit-linear-gradient(-144deg, $primary-color 50%, $terciary-color);
-  }
-
-  figcaption button {
-      @include primaryButton;
-      transform: translateZ(0) scale(1);
-      transition: transform .25s;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      opacity: 0;
-      transition: opacity 0.25s;
-  }
-  
-  figure:hover button{
-      opacity: 1;
   }

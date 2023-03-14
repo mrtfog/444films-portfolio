@@ -4,6 +4,7 @@ import Header from "./Header/Header";
 import Navbar from "./Navbar/Navbar";
 import Portfolio from "./Portfolio/Portfolio";
 import Slider from "./Portfolio/Slider";
+import Footer from "./Footer/Footer";
 
 
 export {
@@ -12,5 +13,6 @@ export {
     Header,
     Navbar,
     Portfolio,
-    Slider
+    Slider,
+    Footer
 }

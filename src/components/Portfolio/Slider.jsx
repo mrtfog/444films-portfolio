@@ -6,7 +6,7 @@ import { LeftArrow, RightArrow } from '../../constants/icons';
 
 const Slider = () => {
 
-    const sliderArray = [1, 2, 3, 4, 5, 6];
+    const sliderArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     const [width, setWidth] = useState(0);
     const dragSlider = useRef();
 
@@ -27,19 +27,12 @@ const Slider = () => {
     }
 
   return (
-    <>
+    <motion.div whileInView={{ y: [-50, 0], opacity: [0, 1]}} transition={{ duration: 1 }}>
         <div className={s.slider}>
             <div className={s.slider_box}>
-                <h4>Explora más producciones</h4>
-                <div className={s.slider_box_button}>
-                    <div className={s.slider_box_button_btn}>
-                        <div className={s.slider_box_button_btn_icon}>
-                            <LeftArrow onClick={()=> handleScroll("left")}/>
-                        </div>
-                        <div className={s.slider_box_button_btn_icon}>
-                            <RightArrow onClick={()=> handleScroll("right")}/>
-                        </div>
-                    </div>
+
+                <div className={s.slider_box_title}>
+                    <h4>Explorá más producciones</h4>   
                 </div>
 
                 <motion.div className={s.slider_box_items} ref={dragSlider}>
@@ -50,9 +43,19 @@ const Slider = () => {
                     </motion.div>
                 </motion.div>
 
+                <div className={s.slider_box_button}>
+                    <div className={s.slider_box_button_btn}>
+                        <div className={s.slider_box_button_btn_icon}>
+                            <LeftArrow onClick={()=> handleScroll("left")}/>
+                        </div>
+                        <div className={s.slider_box_button_btn_icon}>
+                            <RightArrow onClick={()=> handleScroll("right")}/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </>
+    </motion.div>
   )
 }
 

@@ -1,0 +1,178 @@
+@import '../../../scss/abstracts/mixins.module';
+@import '../../../scss/abstracts/variables.module';
+
+.footerLight{
+    background-color: #fff;
+    transition: .4s linear;
+
+    .mainContainer{
+        max-width: 1280px;
+        overflow: hidden;
+        padding: 80px 24px 80px 24px;
+        margin: auto;
+        @media not all and (min-width: 640px) {
+            padding: 96px 24px 96px 24px;
+        }
+        @media not all and (min-width: 1024px){
+            padding: 96px 32px 96px 32px;
+        }
+
+        .sections{
+            margin: 0 0 -24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media not all and (min-width: 640px) {
+                display: flex;
+                justify-items: center;
+                margin-left: 48px;
+            }
+
+            .menuItems{
+                padding: 0 0 24px 0;
+                margin-left: 40px;
+                cursor: pointer;
+
+                .menuLightLabel{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    color: $dark-color;
+                }
+            }
+        }
+
+        .socialMedia{
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+
+            .iconLight{
+                color: $dark-color;
+                margin-left: 40px;
+
+                transition: all .3s ease-in-out;
+
+
+                .iconLabel{
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border-width: 0;
+                }
+
+                .iconSize{
+                    width: 25px;
+                    height: 25px;
+                }
+
+                &:hover{
+                    color: $primary-color;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .rightsLight{
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 16px;
+            line-height: 1.25rem;
+            color: $dark-color;
+        }
+    }
+}
+
+.footerDark{
+    background-color: $primary-color;
+    transition: .4s linear;
+    .mainContainer{
+        max-width: 1280px;
+        overflow: hidden;
+        padding: 80px 24px 80px 24px;
+        margin: auto;
+
+        @media not all and (min-width: 640px) {
+            padding: 96px 24px 96px 24px;
+        }
+        @media not all and (min-width: 1024px){
+            padding: 96px 32px 96px 32px;
+        }
+
+        .sections{
+            margin: 0 0 -24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            @media not all and (min-width: 640px) {
+                display: flex;
+                justify-items: center;
+                margin-left: 48px;
+
+            }
+            .menuItems{
+                padding: 0 0 24px 0;
+                margin-left: 40px;
+                cursor: pointer;
+                .menuDarkLabel{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    color: $light-color;
+                }
+            }
+        }
+
+        .socialMedia{
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+
+            .iconDark{
+                color: $light-color;
+                margin-left: 40px;
+
+                transition: all .3s ease-in-out;
+
+                .iconLabel{
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border-width: 0;
+                }
+
+                .iconSize{
+                    width: 25px;
+                    height: 25px;
+                }
+
+                &:hover{
+                    color: $terciary-color;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .rightsDark{
+            margin: 40px auto 0 auto;            
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.25rem;
+            color: $light-color;
+        }
+    }
+}

@@ -3,20 +3,69 @@
 
 
 .sliderCard{
-    padding: 1rem;
-
+    border: 2px solid $contrast-light-color;
+    border-radius: 7px;
+    transition: all .3s ease-in;
+    cursor: grabbing;
     .sliderCard_box{
-        transition: all .3s ease-in;
         border-radius: 7px;
         padding-bottom: 1rem;
 
-        &:hover{
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;        
+        .sliderCard_box_image{
+            width: 100%;
+            height: 30%;
+            overflow: hidden;
+            .sliderCard_box_image_img{
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                border-radius: 5px 5px 0 0;
+                pointer-events: none;
+            }
         }
-        .sliderCard_box_image_img{
-            object-fit: cover ;
-            height: 100px;
-            width: 200px;
+
+        .sliderCard_box_title{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2rem;
+            gap: 1rem;
+
+            p{
+                font-size: 1.2rem;
+                line-height: .5;
+                font-weight: 600;
+            }
         }
+
+        .sliderCard_box_description{
+
+
+            @include centerDivsCols;
+            justify-content: space-between;
+            width: 100%;
+            .sliderCard_box_description_box{
+                @include centerDivs;
+                width: 100%;
+                font-size: 14px;
+                p{
+                    text-align: center;
+                }
+            }
+
+            .sliderCard_box_description_button{
+                margin: 20px 0 10px 0;
+                button{
+                    @include secondaryButton;
+                }
+            }
+        }
+    }
+
+    
+    &:hover{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;        
+        border: 2px solid $primary-color;
+
     }
 }

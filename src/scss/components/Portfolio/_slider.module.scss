@@ -8,9 +8,12 @@
         width: 80%;
         margin: 0 auto;
         padding: 0 -1rem 8rem 0;
+        .slider_box_title{
+            h4{
+                @include subtitleSize;
+                @include centerDivs;
+            }
 
-        h4{
-            @include subtitleSize;
         }
     }
 
@@ -44,14 +47,13 @@
 .slider_box_items{
     width: 100%;
     overflow: hidden;
+    scroll-behavior: smooth;
 
     .slider_box_item{
         display: grid;
-        grid-template-columns: repeat(6,20.4rem);
+        grid-template-columns: repeat(9,20.4rem);
         gap: 1rem;
         padding: 4rem 2rem;
-        cursor: grabbing;
-
         &::-webkit-scrollbar{
             display: none;
         }
