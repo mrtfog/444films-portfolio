@@ -40,8 +40,9 @@ import s from '../../scss/components/Footer/_footer.module.scss';
 
           </div>
           <p className={isDark ? `${s.rightsDark}` : `${s.rightsLight}`}>
-            &copy; 2023 Lautaro Rodriguez. Todos los derechos reservados.
+            &copy; 2023 Lautaro Rodriguez. Todos los derechos reservados. 
           </p>
+          
         </div>
       </footer>
     )
